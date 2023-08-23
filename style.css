@@ -1,0 +1,35 @@
+.wrap{
+    width: 100%;
+}
+header{
+    height: 100px;
+    background-color: lightcoral;
+}
+/* main */
+main .main_banner{
+    height: 700px;
+    background-color: lightgray;
+}
+.content1{
+    height: 500px;
+    background-color: lightgoldenrodyellow;
+}
+.content2{
+    height: 500px;
+    background-color: rgb(172, 172, 73);
+}
+.content3{
+    height: 500px;
+    background-color: rgb(245, 245, 100);
+}
+footer{
+    height: 300px;
+    background-color: gray;
+}
+.container{
+    width: 100%;
+    max-width: 1200px;
+    height: inherit;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.2);
+}
