@@ -5,31 +5,141 @@ header{
     height: 100px;
     background-color: lightcoral;
 }
-/* main */
-main .main_banner{
-    height: 700px;
-    background-color: lightgray;
-}
-.content1{
-    height: 500px;
-    background-color: lightgoldenrodyellow;
-}
-.content2{
-    height: 500px;
-    background-color: rgb(172, 172, 73);
-}
-.content3{
-    height: 500px;
-    background-color: rgb(245, 245, 100);
-}
-footer{
-    height: 300px;
-    background-color: gray;
-}
 .container{
     width: 100%;
     max-width: 1200px;
     height: inherit;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+/* main */
+main .main_banner{
+    height: 700px;
+    background-color: lightgray;
+}
+
+/* main -content1 */
+.content1{
+    height: 500px;
+    background-color: lightgoldenrodyellow;
+}
+.content1 .container .introduce_text{
+    width: 500px;
+    height: 200px;
+    background-color: lightskyblue;
+    margin: auto;
+    
+}
+.content1 .container .introduce_img{
+    width: 300px;
+    height: 200px;
+    background-color: lightskyblue;
+    margin: 50px auto;
+}
+.content2{
+    height: 500px;
+    background-color: rgb(172, 172, 73);
+}
+.content2 .container{
+    display: flex;
+    
+}
+.content2 .container .service_text{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(245, 173, 229);
+    position: absolute;
+    top: 30%;
+    left: 20%;
+}
+.content2 .container .service_img{
+    width: 300px;
+    height: 100%;
+    background-color: rgb(233, 94, 238);
+    position: absolute;
+    left: 60%;
+}
+.content3{
+    height: 800px;
+    background-color: rgb(245, 245, 100);
+}
+.content3 .news_text{
+    width: 800px;
+    height: 150px;
+    background-color: rgb(199, 124, 124);
+}
+.content3 .news_list{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+.content3 .news_list li{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(157, 135, 255);
+    
+}
+.content3 .news_button{
+    width: 100px;
+    height: 30px;
+    background-color: aquamarine;
+    margin: auto;
+}
+.content3 .news_inner{
+    display: flex;
+    width: 1000px;
+    margin: 50px auto;
+    justify-content: space-around;
+}
+.partnership{
+    width: 400px;
+    height: 200px;
+    background-color: blanchedalmond;
+}
+.career{
+    width: 400px;
+    height: 200px;
+    background-color: blanchedalmond;
+}
+footer{
+    height: 300px;
+    background-color: gray;
+}
+footer .container{
+    display: flex;
+}
+footer .footer_left{
+    width: 70%;
+    height: 100%;
+    background-color: lightslategray;
+}
+footer .footer_left .footer_logo{
+    width: 150px;
+    height: 50px;
+    background-color: lightpink;
+}
+footer .footer_left .address{
+    width: 100%;
+    height: 150px;
+    background-color: lightblue;
+}
+footer .footer_left .footer_inner{
+    display: flex;
+}
+footer .footer_left .footer_inner .link{
+    width: 200px;
+    height: 50px;
+    background-color: azure;
+}
+footer .footer_left .footer_inner .sns{
+    width: 500px;
+    height: 50px;
+    background-color: rgb(147, 241, 241);
+}
+footer .footer_right{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(169, 181, 194);
+
 }
