@@ -4,6 +4,13 @@
 header{
     height: 100px;
     background-color: lightcoral;
+    display: flex;
+    /* gnb>li저스티피 컨텐트/ 로고-gnb양옆으로 벌어지게 */
+}
+header .logo{
+    width: 300px;
+    height: 100%;
+    background-color: aqua;
 }
 .container{
     width: 100%;
