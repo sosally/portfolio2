@@ -1,17 +1,7 @@
 .wrap{
     width: 100%;
 }
-header{
-    height: 100px;
-    background-color: lightcoral;
-    display: flex;
-    /* gnb>li저스티피 컨텐트/ 로고-gnb양옆으로 벌어지게 */
-}
-header .logo{
-    width: 300px;
-    height: 100%;
-    background-color: aqua;
-}
+/* container */
 .container{
     width: 100%;
     max-width: 1200px;
@@ -19,6 +9,34 @@ header .logo{
     margin: auto;
     background-color: rgba(0, 0, 0, 0.2);
     position: relative;
+}
+/* header */
+header{
+    width: 100%;
+    height: 100px;
+    background-color: lightcoral;
+    display: flex;
+    justify-content: space-between;
+    /* gnb>li저스티피 컨텐트/ 로고-gnb양옆으로 벌어지게 */
+}
+header .logo{
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    background-color: aqua;
+}
+header .gnb{
+    width: 100%;
+    max-width: 700px;
+    height: 100px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+}
+header .gnb li{
+    background-color: aquamarine;
+    width: 100px;
+    height: 100%;
 }
 /* main */
 main .main_banner{
