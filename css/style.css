@@ -14,11 +14,11 @@
 /* header */
 header{
     width: 100%;
-    background-color: black;
+    
     display: flex;
     justify-content: space-between;
     padding: 29px 152px;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1;
 }
@@ -58,10 +58,43 @@ header .global_icon{
 
 /* main */
 main .main_banner{
-    height: 700px;
-    background-color: lightgray;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/slide_img05.png) no-repeat center center/cover;
+    margin: auto;
 }
-
+main .main_banner_inner{
+    position: absolute;
+    top: 50%;
+    /* transform: translateY(-); */
+    padding: 0 150px;
+}
+main .main_banner h3{
+    font-size: 48px;
+    line-height: 68px;
+    color: #fff;
+    
+    width: 100%;
+    
+    
+}
+main .main_btn{
+    
+}
+main .main_btn_inner{
+    display: inline-block;
+    height: 48px;
+    line-height: 48px;
+    font-size: 15px;
+    padding: 0 33px;
+    border: 0.1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 100px;
+    margin: auto;
+    margin-top: 30px;
+    
+    color: #fff;
+    
+}
 /* main -content1 */
 .content1 .container{
     text-align: center;
@@ -159,13 +192,28 @@ main .block_black{
     justify-content: space-around;
     margin: 50px auto;
 }
-.content3 .news_list li{
-    width: 200px;
-    height: 200px;
-    background-color: rgb(157, 135, 255);
-    
+
+.content3 .new_list1 span{
+    font-size: 16px;
+    line-height: 22px;
+    color: #aaa;
+    font-weight: 500;
 }
-.content3 .news_inner1{
+.content3 .news_list p{
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 24px;
+}
+.content3 .news_inner1 ul li{
+    text-align: left;
+    width: calc(25% - 24px);
+}
+.content3 .news_list img{
+    width: 300px;
+    height: 169px;
+    border-radius: 24px;
+}
+.content3 .news_btn_inner{
     text-align: center;
 }
 .content3 .news_btn{
@@ -177,7 +225,6 @@ main .block_black{
     border: 1px solid black;
     border-radius: 100px;
     margin: auto;
-    
 }
 .content3 .news_inner2{
     display: flex;
@@ -249,47 +296,88 @@ main .block_black{
     bottom: 27px;
     right: 29px;
 }
+
+
 /* footer */
 footer{
-    height: 300px;
-    background-color: gray;
+    background-color: #f9f9f9;
 }
 footer .container{
     display: flex;
+    width: 1476px;
+    
+    margin: 0 auto 50px;
+    padding: 50px 90px;
 }
 footer .footer_left{
     width: 70%;
     height: 100%;
-    background-color: lightslategray;
+    
 }
-footer .footer_left .footer_logo{
-    width: 150px;
-    height: 50px;
-    background-color: lightpink;
+footer .footer_left a{
+    color: #aaa;
+}
+footer .footer_left .footer_logo img{
+    width: 180px;
 }
 footer .footer_left .address{
-    width: 100%;
-    height: 150px;
-    background-color: lightblue;
+    
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+    margin: 36px 0 23px;
+}
+footer .address p.corp{
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 500;
 }
 footer .footer_left .footer_inner{
     display: flex;
 }
 footer .footer_left .footer_inner .link{
-    width: 200px;
-    height: 50px;
-    background-color: azure;
+    display: flex;
+    
+    font-size: 14px;
+    line-height: 1;
+    margin-right: 9%;
+    margin-bottom: 10px;
+}
+footer .footer_left .link li:nth-child(2){
+    margin-left: 19px;
 }
 footer .footer_left .footer_inner .sns{
-    width: 500px;
-    height: 50px;
-    background-color: rgb(147, 241, 241);
+    display: flex;
+    
+    font-size: 14px;
+    line-height: 1;
+    margin-right: 9%;
+    margin-bottom: 10px;
+    
 }
-footer .footer_right{
-    width: 30%;
-    height: 100%;
-    background-color: rgb(169, 181, 194);
-
+footer .footer_left .footer_inner .sns li{
+    margin: 12px;
+}
+footer .family_btn{
+    background-color: #999;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 42px 0 14px;
+    font-size: 13px;
+    position: relative;
+    border-radius: 5px;
+    border-color: transparent;
+}
+footer .family_btn:after{
+    content: '';
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../images/footer_plus.png) no-repeat;
+    position: absolute;
+    top: 13px;
+    right: 14px;
 }
 /* popup */
 .popup{
