@@ -46,6 +46,10 @@ header nav .global_icon{
     margin-top: -2px;
     cursor: pointer;
 }
+
+
+
+
 header .gnb a{
     color: #fff;
     padding: 0 24px;
@@ -54,9 +58,39 @@ header .global_icon{
     width:24px;
     height: 24px;
     background: url(../images/global_icon.png) no-repeat center/cover;
+    position: relative;
+}
+/* 뎁스 */
+.global_depth{
+    width: 110px;
+    background-color: #fff;
+    position: absolute;
+    top: 40px;
+    right: 10%;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    padding: 12px;
+    display: none;
+}
+.global_depth .depth2:hover{
+    background-color: #117ce9;
+    border-radius: 4px;
+    
 }
 
-
+.global_depth a{
+    display: inline-block;
+    color: #1e1e1e;
+    padding: 14px 16px;
+    
+}
+.global_depth a:hover{
+    color: #fff;
+}
+.global_icon:hover .global_depth{
+    display: block;
+}
 /* main */
 main .main_banner{
     width: 100%;
@@ -83,19 +117,21 @@ main .main_banner h3{
 main .main_btn{
     color: #fff;
     font-size: 12px;
-    
-}
-main .main_btn_inner{
     display: inline-block;
     height: 48px;
     line-height: 46px;
-    font-size: 15px;
-    padding: 0 33px;
+    font-size: 12px;
+    padding: 0 50px;
     border: 0.1px solid rgba(255, 255, 255, 0.3);
     border-radius: 100px;
     margin: auto;
     margin-top: 30px;
 }
+.main_btn:hover{
+    border: 1px solid #fff;
+    transition: all 0.3s;
+}
+
 .main_slide_btn{
     position: absolute;
     top: 90%;
@@ -179,6 +215,10 @@ main .block_black{
     padding: 0 40px;
     border-radius: 100px;
 }
+.introduce_btn:hover{
+    background-color: #117ce9;
+    
+}
 .content1 .introduce_inner2{
     max-width: 1200px;
     margin: 50px auto;
@@ -249,6 +289,10 @@ main .block_black{
     padding: 0 40px;
     border-radius: 100px;
 }
+.service_btn:hover{
+    background-color: #117ce9;
+    transition: all 0.3s;
+}
 .content3 .new_list1{
    
     color: #1e1e1e;
@@ -303,6 +347,12 @@ main .block_black{
     margin: auto;
     color: black;
 }
+.news_btn:hover{
+    background-color: #117ce9;
+    border: 0;
+    color: #fff;
+    transition: all 0.3s;
+}
 .content3 .news_inner2{
     display: flex;
     
@@ -333,7 +383,7 @@ main .block_black{
     position: absolute;
     height: 48px;
     line-height: 48px;
-    background-color: black;
+    background-color: #1e1e1e;
     color: #fff;
     font-size: 15px;
     padding: 0 33px;
@@ -341,6 +391,12 @@ main .block_black{
     position: absolute;
     bottom: 27px;
     right: 29px;
+}
+.partnership_btn:hover{
+    background-color: #fff;
+    color: #1e1e1e;
+    transition: all 0.3s;
+
 }
 .career{
     background-color: #07b4eb;
@@ -373,7 +429,11 @@ main .block_black{
     bottom: 27px;
     right: 29px;
 }
-
+.career_btn:hover{
+    background-color: #fff;
+    color: #1e1e1e;
+    transition: all 0.3s;
+}
 
 /* footer */
 footer{
