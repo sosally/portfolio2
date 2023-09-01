@@ -72,6 +72,7 @@ header .global_icon{
     text-align: center;
     padding: 12px;
     display: none;
+    
 }
 .global_depth .depth2:hover{
     background-color: #117ce9;
@@ -150,12 +151,14 @@ main .main_btn{
     background: url(../images/main_prev_btn.png) center center/cover no-repeat;
     width: 48px;
     height: 48px;
+    cursor: pointer;
 }
 .main_slide_btn .main_next_btn_inner{
     background: url(../images/main_next_btn.png) center center/cover no-repeat;
     width: 48px;
     height: 48px;
     margin-left: 24px;
+    cursor: pointer;
 }
 .slide_btn_num {
     color: #fff;
