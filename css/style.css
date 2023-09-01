@@ -45,27 +45,45 @@ header nav{
 }
 header .gnb{
     display: flex;
-    
-    
-}
-header nav .global_icon{
-    display: inline-block;
-    margin-top: -2px;
-    cursor: pointer;
 }
 
 
-
-
-header .gnb a{
-    color: #fff;
+header .gnb li{
     padding: 0 24px;
 }
+header .gnb a{
+    color: #fff;
+}
+header .gnb a:hover{
+    color: #117ce9;
+    transition: all 0.3s;
+}
+/* gnb i hover */
+header .gnb i{
+    display: inline-block;
+    /* display: none; */
+    text-indent: -9999px;
+    color: transparent;
+    width: 24px;
+    height: 16px;
+    /* vertical-align: middle; */
+    background: url(../images/gnblink_icon.png) no-repeat center center/cover;
+    /* opacity: 0; */
+}
+header .gnb a:hover .gnb i{
+    
+}
+
+/* global icon */
 header .global_icon{
     width:24px;
     height: 24px;
     background: url(../images/global_icon.png) no-repeat center/cover;
     position: relative;
+    display: inline-block;
+    margin-top: -2px;
+    cursor: pointer;
+    
 }
 /* 뎁스 */
 .global_depth{
@@ -227,7 +245,7 @@ main .block_black{
 }
 .introduce_btn:hover{
     background-color: #117ce9;
-    
+    transition: all 0.3s;
 }
 .content1 .introduce_inner2{
     max-width: 1200px;
@@ -321,8 +339,26 @@ main .block_black{
     display: flex;
     justify-content: space-around;
     margin: 50px auto;
+    
 }
-
+/* news hover */
+.content3 .new_list1{
+    position: relative;
+}
+.content3 .new_list1:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 169px;
+    border-radius: 24px;
+    background-color: rgba(0, 0, 0, 0.3); /* 원하는 어두운 색상 및 투명도 설정 */
+    transition: all 0.3s;
+  }
+.content3 .new_list1:hover .news_list1{
+    color: #117ce9;
+}
 .content3 .new_list1 span{
     font-size: 16px;
     line-height: 22px;
@@ -483,6 +519,10 @@ footer .footer_left .footer_inner{
     display: flex;
     
 }
+.footer_inner a:hover{
+    color: #117ce9;
+    transition: all 0.3s;
+}
 footer .footer_left .footer_inner .link{
     display: flex;
     
@@ -493,6 +533,9 @@ footer .footer_left .footer_inner .link{
 }
 .link{
     padding: 0;
+}
+.link li:nth-child(2){
+    font-size: 16px;
 }
 footer .footer_left .link li:nth-child(2){
     margin-left: 19px;
