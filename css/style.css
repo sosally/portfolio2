@@ -178,12 +178,26 @@ main .main_btn{
     height: 48px;
     cursor: pointer;
 }
+.main_pre_btn_inner:hover{
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    background: url(../images/main_pre_btn_blue.png) center center/cover no-repeat;
+    transition: all 0.3s;
+}
 .main_slide_btn .main_next_btn_inner{
     background: url(../images/main_next_btn.png) center center/cover no-repeat;
     width: 48px;
     height: 48px;
     margin-left: 24px;
     cursor: pointer;
+}
+.main_next_btn_inner:hover{
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    background: url(../images/main_next_btn_blue.png) center center/cover no-repeat;
+    transition: all 0.3s;
 }
 .slide_btn_num {
     color: #fff;
@@ -213,6 +227,21 @@ main .main_btn{
     z-index: 10;
     display: inline-block;
     transform: translateX(calc(-64px/2));
+    animation: arrow 1.6s infinite;
+    cursor: pointer;
+}
+.down_btn:hover{
+    background: url(../images/down_arrow_blue.png) no-repeat center center/contain;
+    cursor: pointer;
+    animation: arrow 1.6s infinite;
+}
+@keyframes arrow{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(8px);
+    }
 }
 
 /* main -content1 */
@@ -598,4 +627,9 @@ footer .family_btn:after{
     bottom: 50px;
     right: 50px;
     z-index: 10;
+}
+@media all and (max-width:1280px) {
+    nav .gnb{
+        display: none;
+    }
 }
