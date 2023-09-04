@@ -660,7 +660,7 @@ footer .family_list li a:hover{
     color: #fff;
     font-size: 16px;
     top: 30%;
-    left: 40%;
+    left: 60%;
     z-index: 999;
     padding: 10px;
 }
@@ -678,6 +678,10 @@ footer .family_list li a:hover{
 @media all and (max-width : 1280px) {
     header nav{
         width: 50px;
+    }
+    header .logo{
+        width: 144px;
+        height: 17px;
     }
     nav .gnb{
 
@@ -715,30 +719,30 @@ footer .family_list li a:hover{
     width: auto;
     height: 42px;
 }
-    }
-    .content1 .introduce{
-        margin: 0;
-    }
-    .content1 .introduce_inner1{
-        padding: 48px 24px 0;
-    }
-    .introduce_inner2 .mo_hyper_img{
-        display: block;
-    }
-    .hyper_img{
-        display: none;
-    }
-    .introduce_text h3{
-     font-size: 24px;
-     margin: 0 auto;
-     margin-bottom: 24px;
-     max-width: 300px;
-     line-height: 30px;
-    }
-    span.block_black{
-        display: inline;
-    }
-    .down_btn{
-        display: none;
-    }
+.content1 .introduce{
+    margin: 0;
+}
+.content1 .introduce_inner1{
+    padding: 48px 24px 0;
+}
+.introduce_inner2 .mo_hyper_img{
+    display: block;
+}
+.hyper_img{
+    display: none;
+}
+.introduce_text h3{
+ font-size: 24px;
+ margin: 0 auto;
+ margin-bottom: 24px;
+ max-width: 300px;
+ line-height: 30px;
+}
+span.block_black{
+    display: inline;
+}
+.down_btn{
+    display: none;
+}
+    
 }   
