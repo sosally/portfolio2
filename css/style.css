@@ -545,6 +545,7 @@ main .block_black {
 
 .partnership_btn {
     position: absolute;
+    display: inline-block;
     height: 48px;
     line-height: 48px;
     background-color: #1e1e1e;
@@ -924,5 +925,19 @@ footer .family_list li a:hover {
     main .content3 .news_inner1 .news_list img{
         max-width: 100%;
         height: auto;
+    }
+    .content3 .news_inner2{
+        display: block;
+        width: 100%;
+    }
+    .partnership{
+        
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    
+    .partnership_btn, .career_btn{
+        position: static;
+        margin-top: 12px;
     }
 }
