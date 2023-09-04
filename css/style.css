@@ -918,9 +918,8 @@ footer .family_list li a:hover {
         display: block;
        
     }
-    main .content3 .news_inner1 .news_list li .new_list1{
-        display: flex;
-        
+    main .content3 .news_inner1 .news_list li a{
+      
     }
     main .content3 .news_inner1 .news_list img{
         max-width: 100%;
