@@ -816,16 +816,35 @@ footer .family_list li a:hover {
 }
 
 @media screen and (max-width: 1024px) {
+    header{
+        padding: 22px 30px;
+    }
+    main .main_banner {
+        height: 90vh;
+    }
+    main .main_banner_inner {
+        padding: 0 30px;
+    }
     .wrap main div.content2 div.container2 {
         padding: 0 30px;
     }
-
-    h3 {
-        line-height: 32px;
+    
+    
+    .content1 .container .hyper_img{
+        max-width: 757px;
+        height: auto;
+        
     }
 
     .main_slide_btn {
         padding: 0 30px;
+        top: 88%;
+    }
+    .content1 .introduce_inner1{
+        margin: 90px auto;
+    }
+    .content3 .news_list{
+        display: grid;
     }
     .partnership_btn,
     .career_btn {
@@ -840,6 +859,14 @@ footer .family_list li a:hover {
     }
     footer .container{
         padding: 50px 30px;
+        margin-bottom: 0;
+    }
+    footer .footer_left .footer_inner {
+        display: block;
+    
+    }
+    footer .footer_left .footer_inner .sns li {
+        margin-left: 0px;
     }
     
 }
@@ -852,7 +879,9 @@ footer .family_list li a:hover {
     main .main_banner {
         height: 75vh;
     }
-
+    h3 {
+        line-height: 32px;
+    }
     main .main_banner_inner {
         padding: 0 24px;
     }
@@ -872,7 +901,7 @@ footer .family_list li a:hover {
     main .main_slide_btn {
         top: 92%;
     }
-
+    
     main .main_banner .main_pre_btn_inner {
         background: url(../images/mo_main_pre_btn.png) center center/cover no-repeat;
         width: 36px;
@@ -896,6 +925,7 @@ footer .family_list li a:hover {
 
     .content1 .introduce_inner1 {
         padding: 48px 24px 0;
+        margin: 0 auto;
     }
 
     .introduce_inner2 .mo_hyper_img {
@@ -956,7 +986,6 @@ footer .family_list li a:hover {
 
     .news_inner1 .news_list {
         display: block;
-
     }
     main .content3 .news_inner1 .news_list img {
         max-width: 100%;
@@ -967,7 +996,7 @@ footer .family_list li a:hover {
         display: block;
         width: 100%;
     }
-
+    
     .partnership {
 
         margin-right: 0;
