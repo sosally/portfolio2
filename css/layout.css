@@ -353,7 +353,7 @@ main .block_black {
 
 .content2 .gallery_1 li,
 .gallery_2 li {
-	width: 240px;
+	max-width: 240px;
 	margin-bottom: 30px;
 }
 
@@ -368,8 +368,9 @@ main .block_black {
 }
 
 .content2 .service_right .gallery img {
-	width: 240px;
-	height: 320px;
+	width: 100%;
+	/* width: 240px;
+	height: 320px; */
 }
 
 .content2 h3 {
@@ -429,6 +430,11 @@ main .block_black {
 /* news hover */
 .content3 .new_list1 {
 	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	display: block; 
+	/* a태그니 블럭 줬고, 부모중에 높이가 높은게 뭔지 찾기!!!!! */
 }
 
 .content3 .new_list1:hover::before {
@@ -798,7 +804,9 @@ footer .family_list li a:hover {
     .wrap main div.content2 div.container2 {
         padding: 0 30px;
     }
-    
+    .wrap main .content2 .service_right .gallery_1 img, .wrap main .content2 .service_right .gallery_2 img{
+		/* width: 48%; */
+	}
     
     .content1 .container .hyper_img{
         max-width: 757px;
@@ -943,7 +951,11 @@ footer .family_list li a:hover {
 	main .content2 .service_right {
 		display: none;
 	}
-
+	.content3 .news_text{
+		
+		height: 100px;
+		border-bottom: 1px solid #eee;
+	}
 	.news_text h3 {
 		font-size: 24px;
 	}
@@ -954,6 +966,7 @@ footer .family_list li a:hover {
 
 	.news_inner1 .news_list {
 		display: block;
+		margin: 20px auto;
 	}
 
 	/* 추가한 css */
@@ -969,7 +982,7 @@ footer .family_list li a:hover {
 		flex: 1 1 40%;
 	}
 	main .content3 .news_inner1 .news_list img {
-		max-width: 100%;
+		max-width: 190px;
 		height: auto;
 	}
 
