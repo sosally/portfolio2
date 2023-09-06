@@ -39,7 +39,7 @@ h1 {
 }
 
 header nav {
-	width: 100%;
+	
 	max-width: 600px;
 	font-weight: 700;
 	font-size: 16px;
@@ -122,11 +122,17 @@ header .global_icon {
 }
 
 /* hamburger */
-.hamburger_wrap {
+#ham_menu {
+	cursor: pointer;
+}
+.hamburger_wrap{
 	display: none;
 }
+.hamburger_wrap.active{
+	left: 0;
+}
 
-.hamburger span {
+/* .hamburger span {
 	display: block;
 	width: 20px;
 	height: 2px;
@@ -134,7 +140,10 @@ header .global_icon {
 	margin-bottom: 5px;
 	margin-top: 1.4px;
 	margin-left: 10px;
-}
+} */
+
+
+
 
 /* main */
 main .main_banner {
@@ -265,6 +274,7 @@ main .main_btn {
 }
 
 @keyframes arrow {
+
 	0%,
 	100% {
 		transform: translateY(0);
@@ -417,7 +427,7 @@ main .block_black {
 .content3 .news_text {
 	color: #aaa;
 	line-height: 60px;
-	width: 800px;
+	max-width: 800px;
 	height: 150px;
 }
 
@@ -433,11 +443,11 @@ main .block_black {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	display: block; 
-	/* a태그니 블럭 줬고, 부모중에 높이가 높은게 뭔지 찾기!!!!! */
+	display: block;
+
 }
 
-.content3 .new_list1:hover::before {
+.content3 .new_list1 img:hover::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -446,9 +456,31 @@ main .block_black {
 	height: 169px;
 	border-radius: 24px;
 	background-color: rgba(0, 0, 0, 0.3);
-	/* 원하는 어두운 색상 및 투명도 설정 */
+
 	transition: all 0.3s;
 }
+
+/* 하버!! */
+/* .news_list li {
+	position: relative;
+  }
+  
+  .new_list1:hover img::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.3);
+  }
+   */
+.new_list1:hover img {
+	filter: brightness(50%);
+	transition: all .3s ease-in-out;
+}
+
+/* //하버 */
 
 .content3 .new_list1:hover .news_list1 {
 	color: #117ce9;
@@ -731,18 +763,21 @@ footer .family_list li a:hover {
 .family_list li a:hover:after {
 	background: url();
 }
+
 /* 모바일 푸터 */
 .mo_sns {
 	display: flex;
 	justify-content: space-between;
 	margin: 0 50px;
 }
-.mo_sns li {
-}
+
+.mo_sns li {}
+
 .mo_sns li a img {
 	width: 48px;
 	height: 48px;
 }
+
 /* popup */
 .popup {
 	position: fixed;
@@ -766,14 +801,12 @@ footer .family_list li a:hover {
 	right: 50px;
 	z-index: 10;
 }
+
 .mo_footer_container {
 	display: none;
 }
 
 @media all and (max-width: 1280px) {
-	header nav {
-		width: 50px;
-	}
 
 	header .logo {
 		width: 144px;
@@ -786,79 +819,170 @@ footer .family_list li a:hover {
 		display: none;
 	}
 
-	.hamburger {
+	#ham_menu {
 		display: block;
+		color: #fff;
+		margin-left: 20px;
+		font-size: 20px;
+	}
+
+	.hamburger_wrap {
+		background-color: #fff;
+		position: fixed;
+		left: -100vw;
+		display: block;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+
+		transition: 1s;
+		padding: 0 90px;
+		
+	}
+
+	.hamburger_header {
+		display: flex;
+		justify-content: space-between;
+		margin: 20px 20px;
+	}
+
+	.hamburger_header .logo {
+		display: block;
+
+		background: url(../images/main_logo_black.svg) no-repeat center center/cover;
+	}
+
+	.hamburger_header .close_right {
+		display: block;
+		background: url(../images/close_btn.png) no-repeat center center/cover;
+		width: 32px;
+		height: 32px;
+	}
+
+	.hamburger_nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		/* 안먹는다면 높이 없는것 */
+		gap: 0;
+	}
+
+	.hamburger_nav li {
+		padding: 22px 0;
+		text-align: left;
+		border-bottom: 1px solid #eee;
+		width: 100%;
+		
+	}
+	.hamburger_nav li a{
+		font-size: 18px;
+		color: #aaa;
 	}
 }
 
 @media screen and (max-width: 1024px) {
-    header{
-        padding: 22px 30px;
-    }
-    main .main_banner {
-        height: 90vh;
-    }
-    main .main_banner_inner {
-        padding: 0 30px;
-    }
-    .wrap main div.content2 div.container2 {
-        padding: 0 30px;
-    }
-    .wrap main .content2 .service_right .gallery_1 img, .wrap main .content2 .service_right .gallery_2 img{
+	header {
+		padding: 22px 80px;
+	}
+
+	.hamburger_wrap {
+		padding: 0 30px;
+	}
+
+	main .main_banner {
+		height: 90vh;
+	}
+
+	main .main_banner_inner {
+		padding: 0 30px;
+	}
+
+	.wrap main div.content2 div.container2 {
+		padding: 0 30px;
+	}
+
+	.wrap main .content2 .service_right .gallery_1 img,
+	.wrap main .content2 .service_right .gallery_2 img {
 		/* width: 48%; */
 	}
-    
-    .content1 .container .hyper_img{
-        max-width: 757px;
-        height: auto;
-        
-    }
 
-    .main_slide_btn {
-        padding: 0 30px;
-        top: 88%;
-    }
-    .content1 .introduce_inner1{
-        margin: 90px auto;
-    }
-    .content3 .news_list{
-        display: grid;
-    }
-    .partnership_btn,
-    .career_btn {
-        position: static;
-        margin-top: 12px;
-    }
-    .content3 .container3{
-        padding: 120px 30px 80px;
-    }
-    .content3 .news_inner2{
-        margin-top: 80px;
-    }
-    footer .container{
-        padding: 50px 30px;
-        margin-bottom: 0;
-    }
-    footer .footer_left .footer_inner {
-        display: block;
-    
-    }
-    footer .footer_left .footer_inner .sns li {
-        margin-left: 0px;
-    }
-    
+	.content1 .container .hyper_img {
+		max-width: 757px;
+		height: auto;
+
+	}
+
+	.main_slide_btn {
+		padding: 0 30px;
+		top: 88%;
+	}
+
+	.content1 .introduce_inner1 {
+		margin: 90px auto;
+	}
+
+	/* 수정중!! 주석 풀면 1024일때 2줄로 나옴. */
+	/* .content3 .news_inner1 .news_list {
+		display: flex;
+		flex-wrap: wrap;
+	  }
+	  
+	  .content3 .news_inner1 .news_list li {
+		width: 50%;
+	  } */
+	/* /// */
+	.partnership_btn,
+	.career_btn {
+		position: static;
+		margin-top: 12px;
+	}
+
+	.content3 .container3 {
+		padding: 120px 30px 80px;
+	}
+
+	.content3 .news_inner2 {
+		margin-top: 80px;
+	}
+
+	footer .container {
+		padding: 50px 30px;
+		margin-bottom: 0;
+	}
+
+	footer .footer_left .footer_inner {
+		display: block;
+
+	}
+
+	footer .footer_left .footer_inner .sns li {
+		margin-left: 0px;
+	}
+
 }
+@media screen and (max-width : 840px) {
+
+}
+
 @media screen and (max-width: 767px) {
 	header {
-		padding: 20px;
+		padding: 22px 24px;
+	}
+
+	/* hamburger */
+	.hamburger_wrap {
+		padding: 0 24px;
 	}
 
 	main .main_banner {
 		height: 75vh;
 	}
-    h3 {
-        line-height: 32px;
-    }
+
+	h3 {
+		line-height: 32px;
+	}
+
 	main .main_banner_inner {
 		padding: 0 24px;
 	}
@@ -902,7 +1026,7 @@ footer .family_list li a:hover {
 
 	.content1 .introduce_inner1 {
 		padding: 48px 24px 0;
-        margin: 0 auto;
+		margin: 0 auto;
 	}
 
 	.introduce_inner2 .mo_hyper_img {
@@ -929,6 +1053,7 @@ footer .family_list li a:hover {
 	.down_btn {
 		display: none;
 	}
+
 	/* content2 */
 	.content2 .container2 {
 		flex-direction: column;
@@ -951,11 +1076,11 @@ footer .family_list li a:hover {
 	main .content2 .service_right {
 		display: none;
 	}
-	.content3 .news_text{
-		
-		height: 100px;
-		border-bottom: 1px solid #eee;
+
+	.content3 .news_text {
+		height: 70px;
 	}
+
 	.news_text h3 {
 		font-size: 24px;
 	}
@@ -969,18 +1094,38 @@ footer .family_list li a:hover {
 		margin: 20px auto;
 	}
 
+	.content3 .news_list p {
+		font-size: 14px;
+		line-height: 22px;
+	}
+
+	.content3 .news_list1-1 {
+		display: inline-block;
+		width: calc(100% - 28%);
+		padding: 0 0 2px 12px;
+	}
+
 	/* 추가한 css */
 	.content3 .news_inner1 ul li {
 		width: 100%;
+		padding: 12px 0;
+		border-bottom: 1px #eee solid;
+	}
+
+	.content3 .news_inner1 ul li:first-child {
+		border-top: 1px #eee solid;
 	}
 
 	.content3 .news_inner1 ul li a {
 		display: flex;
-        gap:10%;
+
 	}
-	.content3 .news_inner1 ul li a > div {
-		flex: 1 1 40%;
+
+	.content3 .news_inner1 ul li a>div {
+		/* flex: 1 1 40%; */
+
 	}
+
 	main .content3 .news_inner1 .news_list img {
 		max-width: 190px;
 		height: auto;
@@ -989,6 +1134,14 @@ footer .family_list li a:hover {
 	.content3 .news_inner2 {
 		display: block;
 		width: 100%;
+		margin-top: 60px;
+	}
+
+	.content3 .news_btn {
+		font-size: 14px;
+		line-height: 46px;
+		padding: 0 35px;
+		height: 46px;
 	}
 
 	.partnership {
@@ -1010,6 +1163,7 @@ footer .family_list li a:hover {
 		display: block;
 		padding: 35px 24px 24px;
 	}
+
 	.mo_link {
 		display: flex;
 		margin: 10px 0;
@@ -1017,9 +1171,11 @@ footer .family_list li a:hover {
 		font-size: 12px;
 		margin-bottom: 20px;
 	}
+
 	.mo_link a {
 		color: #666;
 	}
+
 	.mo_link i {
 		background: url(../images/mo_right_arrow.png) no-repeat center center/cover;
 		width: 16px;
@@ -1042,6 +1198,7 @@ footer .family_list li a:hover {
 		text-align: left;
 		margin-top: 10px;
 	}
+
 	footer .mo_family_btn:after {
 		content: '';
 		display: inline-block;
@@ -1052,12 +1209,14 @@ footer .family_list li a:hover {
 		top: 13px;
 		right: 14px;
 	}
+
 	.mo_address {
 		font-size: 12px;
 		color: #999;
 		line-height: 1.6;
 		font-weight: 700;
 	}
+
 	.mo_corp {
 		font-size: 14px;
 		font-weight: 500;
