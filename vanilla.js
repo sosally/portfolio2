@@ -16,3 +16,17 @@ navLinks.forEach(function(x){
         hamMenuIcon.classList.toggle('fa-times');
     })
 });
+
+let globalIcon = document.querySelector('.global_icon');
+let globalDepth = document.querySelector('.global_depth');
+
+globalIcon.addEventListener('click', function(){
+    globalDepth.classList.toggle('active');
+})
+
+let familyBtn = document.querySelector('.family_btn');
+let familyList = document.querySelector('.family_list');
+
+familyBtn.addEventListener('click', function(){
+    familyList.classList.toggle('active');
+})

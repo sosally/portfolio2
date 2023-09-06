@@ -104,6 +104,10 @@ header .global_icon {
 	padding: 10px;
 	text-align: center;
 	padding: 12px;
+	display: none;
+}
+.global_inner ul.global_depth.active {
+	display: block;
 }
 
 .global_depth .depth2:hover {
@@ -742,10 +746,14 @@ footer .family_btn:after {
 	border: 1px solid #eee;
 	border-radius: 4px;
 	padding: 8px 0px;
-
 	background-color: #fff;
+	display: none;
+	
 }
-
+.family_list.active{
+	display: block;
+	
+}
 .family_list li {
 	padding: 6px 14px;
 }
