@@ -63,9 +63,9 @@ $('.gallery_1').bxSlider({
 $('.mo_gallery_1').bxSlider({
     mode : 'horizontal',
     minSlides: 2,
-    maxSlides: 5,
+    maxSlides: 6,
     slideWidth: 'auto',
-    slideMargin: 20,
+    slideMargin: 10,
     ticker: true,
     speed: 50000,
     infiniteLoop: true
@@ -73,9 +73,9 @@ $('.mo_gallery_1').bxSlider({
   $('.mo_gallery_2').bxSlider({
     mode : 'horizontal',
     minSlides: 2,
-    maxSlides: 5,
+    maxSlides: 6,
     slideWidth: 'auto',
-    slideMargin: 20,
+    slideMargin: 10,
     ticker: true,
     speed: 50000,
     infiniteLoop: true

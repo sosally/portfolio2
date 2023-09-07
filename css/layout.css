@@ -11,7 +11,7 @@
 	height: inherit;
 	margin: auto;
 	/* background-color: rgba(0, 0, 0, 0.2); */
-	position: relative;
+	/* position: relative; */
 }
 
 /* header */
@@ -40,7 +40,7 @@ h1 {
 
 header nav {
 	
-	max-width: 600px;
+	max-width: 800px;
 	font-weight: 700;
 	font-size: 16px;
 	display: flex;
@@ -54,12 +54,18 @@ header .gnb {
 
 header .gnb li {
 	padding: 0 24px;
+
+}
+header .gnb li:last-child{
+	padding-right: 100px;
 }
 header .gnb li i{
 	display: none;
 }
 header .gnb a {
 	color: #fff;
+	display: block; 
+	padding-top: 2px;
 }
 
 header .gnb a:hover {
@@ -68,16 +74,19 @@ header .gnb a:hover {
 }
 
 /* gnb i hover */
-header .gnb i {
+header .gnb li:hover i {
 	display: inline-block;
-	/* display: none; */
-	text-indent: -9999px;
+	
+	
 	color: transparent;
 	width: 24px;
 	height: 16px;
 	/* vertical-align: middle; */
 	background: url(../images/gnblink_icon.png) no-repeat center center/cover;
 	/* opacity: 0; */
+}
+header .gnb li a{
+	/* max-width: 100px; */
 }
 
 /* global icon */
@@ -91,10 +100,13 @@ header .global_icon {
 	background: url(../images/global_icon.png) no-repeat center/cover;
 
 	display: inline-block;
-	margin-top: -2px;
+	margin-top: -1px;
 	cursor: pointer;
 }
-
+header .global_icon:hover{
+	background: url(../images/global_icon_blue.png) no-repeat center/cover;
+	transition: all 0.3s;
+}
 /* 뎁스 */
 .global_inner ul.global_depth {
 	width: 110px;
@@ -131,6 +143,7 @@ header .global_icon {
 /* hamburger */
 #ham_menu {
 	cursor: pointer;
+	display: none;
 }
 .hamburger_wrap{
 	display: none;
@@ -351,7 +364,7 @@ main .block_black {
 
 .content2 .container2 {
 	padding: 0 90px;
-	height: 850px;
+	height: 715px;
 }
 
 .content2 .container {
@@ -364,8 +377,15 @@ main .block_black {
 	width: 50%;
 }
 
+.content2 .service_right {
+	display: flex;
+	overflow: hidden;
+	margin-left: 100px;
+	
+}
 .content2 ul.gallery_1 {
 	margin-right: 30px;
+	
 }
 
 .content2 .gallery_1 li,
@@ -376,15 +396,11 @@ main .block_black {
 
 .content2 ul.gallery_2 {
 	/* margin-top: 160px; */
-	transform: translateY(-20%);
+	/* transform: translateY(-20%); */
 
+	top: 20%; /* 자동으로 relative 들어간 상태? */
 }
 
-.content2 .service_right {
-	display: flex;
-	overflow: hidden;
-	margin-left: 100px;
-}
 
 .content2 .service_right .gallery img {
 	max-width: 100%;
@@ -850,6 +866,7 @@ footer .family_list li a:hover {
 		display: block;
 		color: #fff;
 		margin-left: 20px;
+		margin-top: 1px;
 		font-size: 20px;
 	}
 
@@ -1084,6 +1101,7 @@ footer .family_list li a:hover {
 	/* content2 */
 	.content2 .container2 {
 		flex-direction: column;
+		overflow-x: hidden;
 	}
 
 	.content2 .container .service_text {
