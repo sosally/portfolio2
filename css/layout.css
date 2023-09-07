@@ -136,7 +136,7 @@ header .global_icon {
 	display: none;
 }
 .hamburger_wrap.active{
-	left: 0;
+	right: 0;
 }
 
 /* .hamburger span {
@@ -375,7 +375,9 @@ main .block_black {
 }
 
 .content2 ul.gallery_2 {
-	margin-top: 160px;
+	/* margin-top: 160px; */
+	transform: translateY(-20%);
+
 }
 
 .content2 .service_right {
@@ -385,7 +387,7 @@ main .block_black {
 }
 
 .content2 .service_right .gallery img {
-	width: 100%;
+	max-width: 100%;
 	/* width: 240px;
 	height: 320px; */
 }
@@ -736,7 +738,9 @@ footer .family_btn:after {
 	top: 13px;
 	right: 14px;
 }
-
+footer .family_btn:hover{
+	background-color: #1e1e1e;
+}
 .family_inner {
 	position: relative;
 }
@@ -757,6 +761,7 @@ footer .family_btn:after {
 	display: block;
 	
 }
+
 .family_list li {
 	padding: 6px 14px;
 }
@@ -782,13 +787,13 @@ footer .family_list li a:hover {
 	margin: 0 50px;
 }
 
-.mo_sns li {}
-
 .mo_sns li a img {
 	width: 48px;
 	height: 48px;
 }
-
+.mo_service_bottom{
+	display: none;
+}
 /* popup */
 .popup {
 	position: fixed;
@@ -817,6 +822,17 @@ footer .family_list li a:hover {
 	display: none;
 }
 
+/* 동적요소 */
+.bx-viewport{
+	height: 100% !important;
+}
+.mo_service_bottom .bx-wrapper{
+	height: 0; /* 중간에 공간빼기 */
+}
+.mo_service_bottom .bx-viewport{
+	overflow: visible !important;
+}
+
 @media all and (max-width: 1280px) {
 
 	header .logo {
@@ -840,10 +856,10 @@ footer .family_list li a:hover {
 	.hamburger_wrap {
 		background-color: #fff;
 		position: fixed;
-		left: -100vw;
+		right: -100vw;
 		display: block;
 		top: 0;
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
 
 		transition: 1s;
@@ -854,7 +870,7 @@ footer .family_list li a:hover {
 	.hamburger_header {
 		display: flex;
 		justify-content: space-between;
-		margin: 20px 20px;
+		margin: 20px 0;
 	}
 
 	.hamburger_header .logo {
@@ -913,9 +929,9 @@ footer .family_list li a:hover {
 		padding: 0 30px;
 	}
 
-	.wrap main .content2 .service_right .gallery_1 img,
-	.wrap main .content2 .service_right .gallery_2 img {
-		/* width: 48%; */
+	.wrap main .content2 .service_right{
+		margin-left: 10px;
+		/* gallery 커지게 */
 	}
 
 	.content1 .container .hyper_img {
@@ -983,7 +999,7 @@ footer .family_list li a:hover {
 
 	/* hamburger */
 	.hamburger_wrap {
-		padding: 0 24px;
+		padding: 0 40px;
 	}
 
 	main .main_banner {
@@ -1087,7 +1103,31 @@ footer .family_list li a:hover {
 	main .content2 .service_right {
 		display: none;
 	}
-
+	.mo_service_bottom{
+		/* width: 100vw; */
+		display: block;
+		position: relative;
+		/* overflow-x: hidden; */
+	}
+	.mo_gallery_1{
+		display: flex;
+		position: absolute;
+		
+	}
+	.mo_gallery_1 li, .mo_gallery_2 li{
+		margin-right: 10px;
+	}
+	.mo_gallery_2{
+		display: flex;
+		position: absolute;
+		top: 160px;
+		left: 75px;
+	}
+	.mo_service_bottom li img{
+		width: 150px;
+		height: 150px;
+	}
+	/* news */
 	.content3 .news_text {
 		height: 70px;
 	}
@@ -1108,6 +1148,7 @@ footer .family_list li a:hover {
 	.content3 .news_list p {
 		font-size: 14px;
 		line-height: 22px;
+		margin: 10px 0;
 	}
 
 	.content3 .news_list1-1 {
@@ -1192,8 +1233,40 @@ footer .family_list li a:hover {
 		width: 16px;
 		height: 16px;
 		display: inline-block;
+		transform: translateY(25%);
 	}
 
+	/* mo family */
+	.mo_family_inner {
+		position: relative;
+	}
+	
+	.mo_family_list {
+		position: absolute;
+		width: 100%;
+		height: 160px;
+		bottom: 48px;
+		border: 1px solid #eee;
+		border-radius: 4px;
+		padding: 8px 0px;
+		background-color: #fff;
+		display: none;
+		
+	}
+
+	.mo_family_list li {
+		padding: 6px 14px;
+	}
+	
+	.mo_family_list li a {
+		color: #1e1e1e;
+		font-size: 13px;
+	}
+	
+	footer .family_list li a:hover {
+		color: #117ce9;
+		transition: all 0.3s;
+	}
 	.mo_family_btn {
 		background-color: #999;
 		color: #fff;
@@ -1209,7 +1282,15 @@ footer .family_list li a:hover {
 		text-align: left;
 		margin-top: 10px;
 	}
-
+	.mo_family_list.active{
+		display: block;
+		
+	}
+	.mo_family_list.active .mo_family_btn{
+		background-color: #1e1e1e;
+		
+	}
+	/* // mo_family */
 	footer .mo_family_btn:after {
 		content: '';
 		display: inline-block;
@@ -1233,3 +1314,4 @@ footer .family_list li a:hover {
 		font-weight: 500;
 	}
 }
+
