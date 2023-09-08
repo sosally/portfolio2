@@ -38,6 +38,18 @@ moFamilyBtn.addEventListener('click', function(){
     moFamilyList.classList.toggle('active');
 })
 
+//main_slide
+$('.main_slider').bxSlider({
+  mode : 'horizontal',
+  minSlides :1,
+  maxSlides: 1,
+  moveSlides:1,
+  // slideWidth: '100%',
+  // slideMargin: 10,
+  auto:true,
+  speed: 1000
+});
+
 
 //service_slide
 $('.gallery_1').bxSlider({
