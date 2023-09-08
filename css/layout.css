@@ -60,30 +60,39 @@ header .gnb li:last-child{
 	padding-right: 100px;
 }
 header .gnb li i{
-	display: none;
+	color: transparent;
+	display: inline-block;
+	width: 24px;
+	height: 16px;
+	/* vertical-align: middle; */
+	background: transparent;
+	
 }
 header .gnb a {
 	color: #fff;
 	display: block; 
 	padding-top: 2px;
 }
-
+header .gnb a.outlink{
+	width: 55px;
+	height: 18px;
+}
 header .gnb a:hover {
 	color: #117ce9;
 	transition: all 0.3s;
 }
 
 /* gnb i hover */
-header .gnb li:hover i {
-	display: inline-block;
-	
+header .gnb li .outlink:hover i {
 	
 	color: transparent;
 	width: 24px;
 	height: 16px;
-	/* vertical-align: middle; */
+	transition: opacity 0.3s;
 	background: url(../images/gnblink_icon.png) no-repeat center center/cover;
-	/* opacity: 0; */
+
+
+	
 }
 header .gnb li a{
 	/* max-width: 100px; */
@@ -373,18 +382,43 @@ main .block_black {
 
 .content2 .service_left {
 	position: relative;
-	padding: 194px 0;
+	padding: 130px 0;
 	width: 50%;
 }
 
+/* 갤러리 영역 */
 .content2 .service_right {
 	display: flex;
 	overflow: hidden;
 	margin-left: 100px;
-	
+	position: relative;
 }
+/* .service_right .bx-viewport:nth-child(1){
+	position: absolute !important;
+	top: 0;
+	left: 0;
+}
+.service_right .bx-viewport:nth-child(2){
+	position: absolute !important;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+} */
 .content2 ul.gallery_1 {
 	margin-right: 30px;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.content2 ul.gallery_2 {
+	/* margin-top: 160px; */
+	/* transform: translateY(-20%); */
+	
+	top: 25%;
+	transform: translateY(calc(-25%));
+	left: 0%;
+	position: absolute;
 	
 }
 
@@ -394,12 +428,6 @@ main .block_black {
 	margin-bottom: 30px;
 }
 
-.content2 ul.gallery_2 {
-	/* margin-top: 160px; */
-	/* transform: translateY(-20%); */
-
-	top: 20%; /* 자동으로 relative 들어간 상태? */
-}
 
 
 .content2 .service_right .gallery img {
