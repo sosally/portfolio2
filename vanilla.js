@@ -40,6 +40,8 @@ moFamilyBtn.addEventListener('click', function(){
 
 //main_slide
 $('.main_slider').bxSlider({
+  nextSelector : '.main_slide_btn .main_next_btn_inner',
+  prevSelector : '.main_slide_btn .main_prev_btn_inner',
   mode : 'horizontal',
   minSlides :1,
   maxSlides: 1,

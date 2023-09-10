@@ -263,14 +263,16 @@ main .main_btn {
 	display: flex;
 }
 
-.main_slide_btn .main_pre_btn_inner {
+.main_slide_btn .bx-prev {
 	background: url(../images/main_prev_btn.png) center center/cover no-repeat;
 	width: 48px;
 	height: 48px;
 	cursor: pointer;
+	display: inline-block;
+	text-indent: -9999px;
 }
 
-.main_pre_btn_inner:hover {
+.main_slide_btn .bx-prev:hover {
 	width: 48px;
 	height: 48px;
 	cursor: pointer;
@@ -278,22 +280,27 @@ main .main_btn {
 	transition: all 0.3s;
 }
 
-.main_slide_btn .main_next_btn_inner {
+.main_slide_btn .bx-next {
 	background: url(../images/main_next_btn.png) center center/cover no-repeat;
 	width: 48px;
 	height: 48px;
 	margin-left: 24px;
+	display: inline-block;
 	cursor: pointer;
+	text-indent: -9999px;
 }
 
-.main_next_btn_inner:hover {
+.main_slide_btn .bx-next:hover {
 	width: 48px;
 	height: 48px;
 	cursor: pointer;
 	background: url(../images/main_next_btn_blue.png) center center/cover no-repeat;
 	transition: all 0.3s;
 }
-
+/* slide number 삭제 */
+.bx-has-pager{
+	display: none;
+}
 .slide_btn_num {
 	color: #fff;
 	font-size: 16px;
@@ -891,10 +898,9 @@ footer .family_list li a:hover {
 /* popup */
 .popup {
 	position: fixed;
-	width: 200px;
 	background-color: rgba(57, 167, 130, 0.7);
 	color: #fff;
-	font-size: 16px;
+	font-size: 18px;
 	top: 30%;
 	left: 60%;
 	z-index: 999;
@@ -1125,7 +1131,7 @@ footer .family_list li a:hover {
 		top: 92%;
 	}
 
-	main .main_banner .main_pre_btn_inner {
+	main .main_banner .main_prev_btn_inner {
 		background: url(../images/mo_main_pre_btn.png) center center/cover no-repeat;
 		width: 36px;
 		height: 36px;
