@@ -2,28 +2,252 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/hamburger.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .vertical-wrap {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .vertical.right {
+      margin: auto;
+      width: 50%;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .col:first-child {
+      margin-top: -160px;
+    }
+
+    .col {
+      animation: verticalscroll 180s linear infinite;
+    }
+
+    .col li .mo {
+      display: none;
+    }
+
+    @keyframes verticalscroll {
+      0% {
+        transform: translateY(0%);
+      }
+
+      100% {
+        transform: translateY(calc(-320px * 16));
+      }
+    }
+
+    @media screen and (max-width:780px) {
+      .vertical.right {
+        margin: auto;
+        width: 50%;
+        display: flex;
+        flex-flow: column wrap;
+        row-gap: 4rem;
+      }
+
+      .col:first-child {
+        margin-top: 0px;
+      }
+
+      .col {
+        display: flex;
+        gap: 2rem;
+        animation: horizontalscroll 180s linear infinite;
+      }
+
+      .col li {
+        max-width: 150px;
+        max-height: 150px;
+        overflow: hidden;
+      }
+
+      .col li .pc {
+        display: none;
+      }
+
+      .col li .mo {
+        display: block;
+      }
+
+      @keyframes horizontalscroll {
+        0% {
+          transform: translateX(0%);
+        }
+
+        100% {
+          transform: translateX(calc(-320px * 16));
+        }
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="wrap">
-        <div class="hamburger_header">
-            <a href="#" class="logo">
-                <h1>naver_cloud</h1>
-            </a>
-            <a href="" class="close_right"></a>
-        </div>
-        <ul class="hamburger_nav">
-            <li><a href="#">소개</a></li>
-            <li><a href="#">기술 · 서비스</a></li>
-            <li><a href="#">미디어</a></li>
-            <li><a href="#">채용<i>outlink</i></a></li>
-            <li><a href="#">제휴<i>outlink</i></a></li>
-        </ul>
+  <div class="vertical-wrap">
+    <div class="vertical right">
+      <ul class="col">
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+      </ul>
+      <ul class="col">
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/000/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/000/fff" alt="">
+        </li>
+        <li>
+          <img class="pc" src="https://dummyimage.com/240x320/ddd/fff" alt="">
+          <img class="mo" src="https://dummyimage.com/150x150/ddd/fff" alt="">
+        </li>
+      </ul>
     </div>
+  </div>
 </body>
 
 </html>

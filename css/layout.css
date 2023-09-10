@@ -194,6 +194,8 @@ main .main_banner_container2 {
 	background: url(../images/slide_img01.jpg) no-repeat center center/cover;
 	margin: auto;
 	position: relative;
+
+	
 }
 main .main_banner_container3 {
 	max-width: 100%;
@@ -403,6 +405,7 @@ main .block_black {
 .content2 .container2 {
 	padding: 0 90px;
 	height: 715px;
+	overflow: hidden; /* 0910 */
 }
 
 .content2 .container {
@@ -418,10 +421,28 @@ main .block_black {
 /* 갤러리 영역 */
 .content2 .service_right {
 	display: flex;
-	overflow: hidden;
+	
 	margin-left: 100px;
 	position: relative;
+
+	/* 0910 */
+	width: 50%;
+	display: flex;
+	gap: 2rem;
 }
+.pc_gallery{
+	animation: verticalscroll 180s linear infinite;
+}
+    @keyframes verticalscroll {
+      0% {
+        transform: translateY(0%);
+      }
+
+      100% {
+        transform: translateY(calc(-320px * 16));
+      }
+	}
+.content2 .gallery_1{margin-top: -160px;}
 /* .service_right .bx-viewport:nth-child(1){
 	position: absolute !important;
 	top: 0;
@@ -444,9 +465,9 @@ main .block_black {
 	/* margin-top: 160px; */
 	/* transform: translateY(-20%); */
 	
-	top: 25%;
-	transform: translateY(calc(-25%));
-	left: 0%;
+	/* top: 25%; */
+	/* transform: translateY(calc(-25%)); */
+	left: 45%;
 	position: absolute;
 	
 }

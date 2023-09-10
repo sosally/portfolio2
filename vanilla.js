@@ -52,24 +52,24 @@ $('.main_slider').bxSlider({
 
 
 //service_slide
-$('.gallery_1').bxSlider({
-    mode : 'vertical',
-    minSlides: 1,
-    maxSlides: 1,
-    slideWidth: 'auto',
-    slideMargin: 20,
-    ticker: true,
-    speed: 50000
-  });
-  $('.gallery_2').bxSlider({
-    mode : 'vertical',
-    minSlides: 1,
-    maxSlides: 1,
-    slideWidth: 'auto',
-    slideMargin: 20,
-    ticker: true,
-    speed: 50000
-  });
+// $('.gallery_1').bxSlider({
+//     mode : 'vertical',
+//     minSlides: 1,
+//     maxSlides: 1,
+//     slideWidth: 'auto',
+//     slideMargin: 20,
+//     ticker: true,
+//     speed: 50000
+//   });
+//   $('.gallery_2').bxSlider({
+//     mode : 'vertical',
+//     minSlides: 1,
+//     maxSlides: 1,
+//     slideWidth: 'auto',
+//     slideMargin: 20,
+//     ticker: true,
+//     speed: 50000
+//   });
 
   //mo_service_slide
 $('.mo_gallery_1').bxSlider({
