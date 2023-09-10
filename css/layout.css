@@ -353,6 +353,7 @@ main .main_btn {
 }
 
 /* main -content1 */
+
 .content1 .container {
 	text-align: center;
 	margin: 110px auto;
@@ -1105,6 +1106,7 @@ footer .family_list li a:hover {
 
 	main .main_banner {
 		height: 75vh;
+		position: relative;
 	}
 
 	h3 {
@@ -1131,25 +1133,43 @@ footer .family_list li a:hover {
 		top: 92%;
 	}
 
-	main .main_banner .main_prev_btn_inner {
+	.main_slide_btn .bx-prev {
 		background: url(../images/mo_main_pre_btn.png) center center/cover no-repeat;
 		width: 36px;
 		height: 36px;
 		cursor: pointer;
-		margin-top: 6px;
+		display: inline-block;
+		text-indent: -9999px;
 	}
-
-	main .main_banner .main_next_btn_inner {
+	.main_slide_btn .bx-prev:hover {
+		width: 36px;
+		height: 36px;
+		cursor: pointer;
+		background: url(../images/mo_main_pre_btn.png) center center/cover no-repeat;
+		
+	}
+	.main_slide_btn .bx-next {
 		background: url(../images/mo_main_next_btn.png) center center/cover no-repeat;
 		width: 36px;
 		height: 36px;
 		cursor: pointer;
-		margin-top: 6px;
-		margin-left: 14px;
+		/* margin-top: 6px;
+		margin-left: 14px; */
+		display: inline-block;
+	}
+	.main_slide_btn .bx-next:hover {
+		width: 36px;
+		height: 36px;
+		cursor: pointer;
+		background: url(../images/mo_main_next_btn.png) center center/cover no-repeat;
+		
 	}
 
+	.slide_btn_inner{
+		padding-bottom: 50px;
+	}
 	.content1 .introduce {
-		margin: 0;
+		margin-top: 200px;
 	}
 
 	.content1 .introduce_inner1 {
