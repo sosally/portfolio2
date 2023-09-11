@@ -95,3 +95,14 @@ $('.mo_gallery_1').bxSlider({
     speed: 50000,
     infiniteLoop: true
   });
+
+  //popup close
+
+    let closeButton = document.getElementById("closeButton");
+    let popup = document.querySelector(".popup");
+
+    closeButton.addEventListener("click", function() {
+      popup.remove();
+        // 또는 아래의 코드를 사용하여 팝업 요소 자체를 제거할 수도 있습니다.
+        // popup.remove();
+    });

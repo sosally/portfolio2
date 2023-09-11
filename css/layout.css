@@ -913,6 +913,11 @@ footer .family_list li a:hover {
 	z-index: 999;
 	padding: 10px;
 }
+.popup #closeButton{
+	
+	cursor: pointer;
+
+}
 
 /* top_btn */
 .top_btn {
@@ -1031,8 +1036,12 @@ footer .family_list li a:hover {
 		color: #1e1e1e;
 		transition: all 0.3s;
 	}
-	.hamburger_nav li a i{
-		
+	footer .footer_inner .link{
+		white-space: nowrap;
+	}
+	footer .footer_left .footer_inner .sns{
+		margin-right: 0;
+		white-space: nowrap;
 	}
 }
 
@@ -1109,7 +1118,7 @@ footer .family_list li a:hover {
 		display: block;
 
 	}
-
+	
 	footer .footer_left .footer_inner .sns li {
 		margin-left: 0px;
 	}
@@ -1434,7 +1443,7 @@ footer .family_list li a:hover {
 		display: block;
 		
 	}
-	
+
 	.mo_family_list.active .mo_family_btn{
 		background-color: #1e1e1e;
 		
