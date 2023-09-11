@@ -914,7 +914,8 @@ footer .family_list li a:hover {
 	padding: 10px;
 }
 .popup #closeButton{
-	
+	position: absolute;
+	right: 5%;
 	cursor: pointer;
 
 }

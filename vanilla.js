@@ -54,33 +54,14 @@ $('.main_slider').bxSlider({
 });
 
 
-//service_slide
-// $('.gallery_1').bxSlider({
-//     mode : 'vertical',
-//     minSlides: 1,
-//     maxSlides: 1,
-//     slideWidth: 'auto',
-//     slideMargin: 20,
-//     ticker: true,
-//     speed: 50000
-//   });
-//   $('.gallery_2').bxSlider({
-//     mode : 'vertical',
-//     minSlides: 1,
-//     maxSlides: 1,
-//     slideWidth: 'auto',
-//     slideMargin: 20,
-//     ticker: true,
-//     speed: 50000
-//   });
 
   //mo_service_slide
 $('.mo_gallery_1').bxSlider({
     mode : 'horizontal',
     minSlides: 2,
     maxSlides: 6,
-    slideWidth: 'auto',
-    slideMargin: 10,
+    // slideWidth: 'auto',
+    // slideMargin: 10,
     ticker: true,
     speed: 50000,
     infiniteLoop: true
@@ -89,8 +70,8 @@ $('.mo_gallery_1').bxSlider({
     mode : 'horizontal',
     minSlides: 2,
     maxSlides: 6,
-    slideWidth: 'auto',
-    slideMargin: 10,
+    // slideWidth: 'auto',
+    // slideMargin: 10,
     ticker: true,
     speed: 50000,
     infiniteLoop: true
@@ -103,6 +84,5 @@ $('.mo_gallery_1').bxSlider({
 
     closeButton.addEventListener("click", function() {
       popup.remove();
-        // 또는 아래의 코드를 사용하여 팝업 요소 자체를 제거할 수도 있습니다.
-        // popup.remove();
+        
     });
