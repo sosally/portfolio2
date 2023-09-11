@@ -60,8 +60,8 @@ $('.mo_gallery_1').bxSlider({
     mode : 'horizontal',
     minSlides: 2,
     maxSlides: 6,
-    // slideWidth: 'auto',
-    // slideMargin: 10,
+    slideWidth: 'auto',
+    slideMargin: 10,
     ticker: true,
     speed: 50000,
     infiniteLoop: true
@@ -70,8 +70,8 @@ $('.mo_gallery_1').bxSlider({
     mode : 'horizontal',
     minSlides: 2,
     maxSlides: 6,
-    // slideWidth: 'auto',
-    // slideMargin: 10,
+    slideWidth: 'auto',
+    slideMargin: 10,
     ticker: true,
     speed: 50000,
     infiniteLoop: true
