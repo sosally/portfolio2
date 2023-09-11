@@ -200,9 +200,14 @@ main .main_banner_container2 {
 main .main_banner_container3 {
 	max-width: 100%;
 	height: 100vh;
-	background: url(../images/slide_img05.png) no-repeat center center/cover;
+	
 	margin: auto;
 	position: relative;
+}
+main .main_banner_container3 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 main .main_banner_container4 {
 	max-width: 100%;
@@ -211,7 +216,14 @@ main .main_banner_container4 {
 	margin: auto;
 	position: relative;
 }
-
+.main_banner_container4 a.main_btn{
+	display: block;
+	background: url(../images/main_slide4_btn.png) no-repeat center center/cover;
+	width: 299px;
+    height: 46px;
+	margin: 0;
+    margin-top: 30px;
+}
 
 
 main .main_banner_inner {
@@ -237,7 +249,7 @@ main .main_btn {
 	line-height: 46px;
 	font-size: 12px;
 	padding: 0 50px;
-	border: 0.1px solid rgba(255, 255, 255, 0.3);
+	border: 0.05px solid rgba(255, 255, 255, 0.3);
 	border-radius: 100px;
 	margin: auto;
 	margin-top: 30px;
@@ -462,12 +474,6 @@ main .block_black {
 	left: 0;
 	max-width: 100%;
 } */
-.content2 ul.gallery_1 {
-	margin-right: 30px;
-	top: 0;
-	left: 0;
-	position: absolute;
-}
 
 .content2 ul.gallery_2 {
 	/* margin-top: 160px; */
@@ -475,8 +481,8 @@ main .block_black {
 	
 	/* top: 25%; */
 	/* transform: translateY(calc(-25%)); */
-	left: 45%;
-	position: absolute;
+
+	
 	
 }
 
@@ -489,7 +495,7 @@ main .block_black {
 
 
 .content2 .service_right .gallery img {
-	max-width: 100%;
+	width: 100%;
 	/* width: 240px;
 	height: 320px; */
 }
@@ -933,7 +939,20 @@ footer .family_list li a:hover {
 .mo_service_bottom .bx-viewport{
 	overflow: visible !important;
 }
-
+@media only screen and (max-width: 1279px){
+	header {
+		padding: 22px 90px;
+	}
+	main .main_banner .bx-wrapper {
+		height: 90vh;
+	}
+	.main_slide_btn{
+		top: 82%;
+	}
+	.down_btn{
+		bottom: 14%;
+	}
+}
 @media all and (max-width: 1280px) {
 
 	header .logo {
@@ -964,7 +983,7 @@ footer .family_list li a:hover {
 		width: 100%;
 		height: 100vh;
 
-		transition: 1s;
+		transition: 0.5s;
 		padding: 0 90px;
 		
 	}
@@ -1008,6 +1027,13 @@ footer .family_list li a:hover {
 		font-size: 18px;
 		color: #aaa;
 	}
+	.hamburger_nav li a:hover{
+		color: #1e1e1e;
+		transition: all 0.3s;
+	}
+	.hamburger_nav li a i{
+		
+	}
 }
 
 @media screen and (max-width: 1024px) {
@@ -1019,9 +1045,6 @@ footer .family_list li a:hover {
 		padding: 0 30px;
 	}
 
-	main .main_banner {
-		height: 90vh;
-	}
 
 	main .main_banner_inner {
 		padding: 0 30px;
@@ -1044,9 +1067,11 @@ footer .family_list li a:hover {
 
 	.main_slide_btn {
 		padding: 0 30px;
-		top: 88%;
+		top: 80%;
 	}
-
+	.down_btn{
+		bottom: 15%;
+	}
 	.content1 .introduce_inner1 {
 		margin: 90px auto;
 	}
@@ -1104,7 +1129,7 @@ footer .family_list li a:hover {
 		padding: 0 40px;
 	}
 
-	main .main_banner {
+	main .main_banner .bx-wrapper {
 		height: 75vh;
 		position: relative;
 	}
@@ -1130,9 +1155,9 @@ footer .family_list li a:hover {
 	}
 
 	main .main_slide_btn {
-		top: 92%;
+		top: 69%;
 	}
-
+	
 	.main_slide_btn .bx-prev {
 		background: url(../images/mo_main_pre_btn.png) center center/cover no-repeat;
 		width: 36px;
@@ -1168,9 +1193,7 @@ footer .family_list li a:hover {
 	.slide_btn_inner{
 		padding-bottom: 50px;
 	}
-	.content1 .introduce {
-		margin-top: 200px;
-	}
+
 
 	.content1 .introduce_inner1 {
 		padding: 48px 24px 0;
@@ -1404,10 +1427,14 @@ footer .family_list li a:hover {
 		text-align: left;
 		margin-top: 10px;
 	}
+	.mo_family_btn:hover{
+		background-color: #1e1e1e;
+	}
 	.mo_family_list.active{
 		display: block;
 		
 	}
+	
 	.mo_family_list.active .mo_family_btn{
 		background-color: #1e1e1e;
 		

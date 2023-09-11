@@ -49,7 +49,8 @@ $('.main_slider').bxSlider({
   // slideWidth: '100%',
   // slideMargin: 10,
   auto:true,
-  speed: 1000
+  speed: 1000,
+  pause : 5000
 });
 
 
